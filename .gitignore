@@ -1,0 +1,6 @@
+venv/
+vault_keys/
+vault_storage/*
+__pycache__/
+*.pyc
+.DS_Store
