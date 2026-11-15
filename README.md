@@ -1,15 +1,36 @@
-# QuantumVault: Post-Quantum Cryptography (PQC) Local Filesystem
+# WEEK 1 – IMPLEMENTATION REPORT
 
-A local secure filesystem prototype designed to protect sensitive files against quantum-computing threats using NIST-standardized Post-Quantum Cryptography (ML-KEM-768) combined with AES-256-GCM symmetric encryption.
+## 1. Introduction
+During the first week of the QuantumVault project, the initial development environment was prepared, and the fundamental components required for post-quantum cryptography and virtual filesystem implementation were explored. The primary objective was to establish the cryptographic library and develop a basic filesystem interface using C and Rust.
 
-## Project Structure
-- `src/` — Core cryptographic modules, key management, and CLI
-- `tests/` — Unit tests and security validation scripts
-- `docs/` — System architecture, threat model, and weekly internship reports
-- `vault_storage/` — Local directory for encrypted vault files
+## 2. Work Completed
 
-## Timeline (Nov 10 – Dec 10, 2026)
-- **Week 1:** Repository setup, architecture design, and ML-KEM-768 key generation
-- **Week 2:** Hybrid encryption engine (ML-KEM + AES-256-GCM) and CLI
-- **Week 3:** Vulnerability assessment, digital signatures (ML-DSA), and benchmarking
-- **Week 4:** Final security report, presentation, and live demonstration
+### 2.1 Post-Quantum Cryptography Setup (C and liboqs)
+The initial work focused on setting up and compiling the Open Quantum Safe (`liboqs`) library. A basic C program was developed to understand the working of post-quantum cryptographic operations.
+
+The program was designed to generate a CRYSTALS-Kyber public and private key pair. It also performed encryption and decryption operations on a short message to verify the basic functionality of the cryptographic implementation.
+
+### 2.2 Rust and FUSE Filesystem Setup
+The second part involved setting up a Rust development environment and creating the initial project structure for filesystem integration.
+
+A basic FUSE (Filesystem in Userspace) interface was implemented to understand how a virtual filesystem works. The application was designed to mount a virtual directory and return the message `"Hello World"` whenever a file was accessed and read.
+
+## 3. Technologies Used
+- C Programming Language
+- Rust Programming Language
+- Open Quantum Safe (`liboqs`)
+- CRYSTALS-Kyber
+- FUSE (Filesystem in Userspace)
+- Linux Operating System
+
+## 4. Learning Outcomes
+- Understood the fundamentals of post-quantum cryptography.
+- Learned the purpose and basic usage of the `liboqs` library.
+- Understood public-key and private-key generation.
+- Explored basic encryption and decryption operations.
+- Learned the fundamentals of Rust project development.
+- Understood how FUSE enables the creation of virtual filesystems.
+- Gained practical knowledge of mounting and accessing a virtual directory.
+
+## 5. Conclusion
+The first week established the basic foundation for the QuantumVault project. The cryptographic component introduced post-quantum key generation and encryption operations using C and `liboqs`, while the filesystem component introduced virtual directory creation using Rust and FUSE. These initial implementations provide the foundation for integrating transparent encryption and decryption into the virtual filesystem in the upcoming weeks.
