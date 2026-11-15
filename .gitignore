@@ -1,6 +1,20 @@
-venv/
+build/
+*.o
+*.so
+*.out
+kyber_test
 vault_keys/
 vault_storage/*
-__pycache__/
-*.pyc
+target/
+.DS_Store
+
+cat << 'EOF' > .gitignore
+build/
+*.o
+*.so
+*.out
+kyber_test
+vault_keys/
+vault_storage/*
+target/
 .DS_Store
