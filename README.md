@@ -1,7 +1,7 @@
 # WEEK 1 – IMPLEMENTATION REPORT
 
 ## 1. Introduction
-During the first week of the QuantumVault project, the initial development environment was prepared, and the fundamental components required for post-quantum cryptography and virtual filesystem implementation were explored. The primary objective was to establish the cryptographic library and develop a basic filesystem interface using C and Rust.
+**QuantumVault** is designed to protect sensitive local files against "Harvest Now, Decrypt Later" quantum computing threats through transparent, quantum-resistant encryption. During Week 1, the Linux development environment was prepared to build the project's two foundational layers: a post-quantum cryptographic engine powered by **C and `liboqs`** (CRYSTALS-Kyber), and a userspace virtual filesystem interface built with **Rust and FUSE**.
 
 ## 2. Work Completed
 
