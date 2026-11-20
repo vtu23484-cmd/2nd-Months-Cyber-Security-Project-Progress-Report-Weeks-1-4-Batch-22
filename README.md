@@ -1,4 +1,5 @@
-QuantumVault — Post-Quantum Encrypted Local Filesystem
+**QuantumVault — Post-Quantum Encrypted Local Filesystem**
+
 QuantumVault is an experimental Linux filesystem prototype that explores how post-quantum cryptography can be connected to file operations through a userspace filesystem.
 
 The project combines:
