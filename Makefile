@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -O2 -Wall -Wextra -fPIC
 LIBS = -loqs
 
-.PHONY: all fuse mount unmount clean
+.PHONY: all fuse mount unmount clean test-mlkem
 
 all: build/libpqc_engine.so fuse
 
@@ -23,3 +23,11 @@ unmount:
 clean:
 	rm -rf build kyber_test
 	cd src/quantumvault_fuse && cargo clean
+
+
+build/mlkem_verify: tests/mlkem_verify.c
+	mkdir -p build
+	$(CC) -O2 -Wall -Wextra $< -o $@ $(LIBS)
+
+test-mlkem: build/mlkem_verify
+	./build/mlkem_verify
