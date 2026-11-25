@@ -31,3 +31,12 @@ build/mlkem_verify: tests/mlkem_verify.c
 
 test-mlkem: build/mlkem_verify
 	./build/mlkem_verify
+
+.PHONY: test-tamper
+
+build/mlkem_tamper: tests/mlkem_tamper.c
+	mkdir -p build
+	$(CC) -O2 -Wall -Wextra $< -o $@ $(LIBS)
+
+test-tamper: build/mlkem_tamper
+	./build/mlkem_tamper
